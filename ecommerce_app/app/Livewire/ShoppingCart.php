@@ -7,12 +7,11 @@ use App\Models\CartItem;
 use App\Models\Order;
 use App\Models\OrderItem;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB; // <--- MISSING IMPORT 1
+use Illuminate\Support\Facades\DB;
 use App\Jobs\CheckLowStock;
 
 class ShoppingCart extends Component
 {
-    // public $cartItems = [];
     public $cartItems;
 
     public function mount()
@@ -29,7 +28,6 @@ class ShoppingCart extends Component
 
     public function updateQuantity($itemId, $quantity)
     {
-        // Cast to integer to prevent 'abc' or string errors
         $quantity = (int) $quantity;
 
         if ($quantity > 0) {

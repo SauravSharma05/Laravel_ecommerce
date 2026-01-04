@@ -1,5 +1,5 @@
 <div class="p-6">
-    <h2 class="text-2xl font-bold mb-4">Your Cart</h2>
+    <h2 class="text-2xl font-bold mb-4 text-white">Your Cart</h2>
 
     @if (session()->has('message'))
         <div class="bg-green-100 text-green-700 p-3 rounded mb-4">
@@ -8,7 +8,7 @@
     @endif
 
     @if($cartItems->isEmpty())
-        <p>Your cart is empty.</p>
+        <p class="text-white">Your cart is empty.</p>
     @else
         <div class="bg-white shadow rounded-lg overflow-hidden">
             <table class="w-full text-left">

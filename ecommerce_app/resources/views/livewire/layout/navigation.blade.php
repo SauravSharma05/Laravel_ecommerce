@@ -4,7 +4,7 @@ use App\Livewire\Actions\Logout;
 use Livewire\Volt\Component;
 use App\Models\CartItem;
 use Illuminate\Support\Facades\Auth;
-use Livewire\Attributes\On; 
+use Livewire\Attributes\On;
 
 new class extends Component {
     /**
@@ -18,6 +18,7 @@ new class extends Component {
         $this->updateCartCount();
     }
 
+    #[On('cart-updated')]
     public function updateCartCount()
     {
         if (Auth::check()) {
