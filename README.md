@@ -33,6 +33,7 @@ A robust, single-page-application (SPA) feel e-commerce system built with **Lara
 * **Database:** MySQL
 * **Queue Driver:** Database / Sync
 * **Mail Driver:** SMTP (Gmail) / Log
+* **Database Name:**laravel_ecommerce
 
 ---
 
